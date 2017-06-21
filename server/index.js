@@ -2,6 +2,10 @@ var express = require('express'),
 	data = require('./data');
 var app = express();
 
+app.get('/helloWorld', function(req, res){
+  res.json({data: 'Hello World!'});
+});
+
 app.get('/region', function (req, res) {
   res.json(data);
 });
