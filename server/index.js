@@ -2,6 +2,10 @@ var express = require('express'),
 	data = require('./data');
 var app = express();
 
+app.get('/', function(req, res){
+  res.status(404).send('Found but not in that way');
+});
+
 app.get('/helloWorld', function(req, res){
   res.json({data: 'Hello World!'});
 });
